@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15D0BAD31FB780D200BCD5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAD21FB780D200BCD5F7 /* AppDelegate.swift */; };
+		15D0BAD51FB780D200BCD5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAD41FB780D200BCD5F7 /* ViewController.swift */; };
+		15D0BAD81FB780D200BCD5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D0BAD61FB780D200BCD5F7 /* Main.storyboard */; };
+		15D0BADA1FB780D200BCD5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D0BAD91FB780D200BCD5F7 /* Assets.xcassets */; };
+		15D0BADD1FB780D200BCD5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */; };
+		15D0BAE81FB780D200BCD5F7 /* RiddleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAE71FB780D200BCD5F7 /* RiddleTests.swift */; };
+		15D0BAF31FB780D200BCD5F7 /* RiddleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15D0BAE41FB780D200BCD5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D0BAC71FB780D200BCD5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15D0BACE1FB780D200BCD5F7;
+			remoteInfo = Riddle;
+		};
+		15D0BAEF1FB780D200BCD5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D0BAC71FB780D200BCD5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15D0BACE1FB780D200BCD5F7;
+			remoteInfo = Riddle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15D0BACF1FB780D200BCD5F7 /* Riddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D0BAD21FB780D200BCD5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15D0BAD41FB780D200BCD5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15D0BAD71FB780D200BCD5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15D0BAD91FB780D200BCD5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15D0BADC1FB780D200BCD5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15D0BADE1FB780D200BCD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D0BAE31FB780D200BCD5F7 /* RiddleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiddleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D0BAE71FB780D200BCD5F7 /* RiddleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleTests.swift; sourceTree = "<group>"; };
+		15D0BAE91FB780D200BCD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D0BAEE1FB780D200BCD5F7 /* RiddleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiddleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleUITests.swift; sourceTree = "<group>"; };
+		15D0BAF41FB780D200BCD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15D0BACC1FB780D200BCD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BAE01FB780D200BCD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BAEB1FB780D200BCD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15D0BAC61FB780D200BCD5F7 = {
+			isa = PBXGroup;
+			children = (
+				15D0BAD11FB780D200BCD5F7 /* Riddle */,
+				15D0BAE61FB780D200BCD5F7 /* RiddleTests */,
+				15D0BAF11FB780D200BCD5F7 /* RiddleUITests */,
+				15D0BAD01FB780D200BCD5F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15D0BAD01FB780D200BCD5F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15D0BACF1FB780D200BCD5F7 /* Riddle.app */,
+				15D0BAE31FB780D200BCD5F7 /* RiddleTests.xctest */,
+				15D0BAEE1FB780D200BCD5F7 /* RiddleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15D0BAD11FB780D200BCD5F7 /* Riddle */ = {
+			isa = PBXGroup;
+			children = (
+				15D0BAD21FB780D200BCD5F7 /* AppDelegate.swift */,
+				15D0BAD41FB780D200BCD5F7 /* ViewController.swift */,
+				15D0BAD61FB780D200BCD5F7 /* Main.storyboard */,
+				15D0BAD91FB780D200BCD5F7 /* Assets.xcassets */,
+				15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */,
+				15D0BADE1FB780D200BCD5F7 /* Info.plist */,
+			);
+			path = Riddle;
+			sourceTree = "<group>";
+		};
+		15D0BAE61FB780D200BCD5F7 /* RiddleTests */ = {
+			isa = PBXGroup;
+			children = (
+				15D0BAE71FB780D200BCD5F7 /* RiddleTests.swift */,
+				15D0BAE91FB780D200BCD5F7 /* Info.plist */,
+			);
+			path = RiddleTests;
+			sourceTree = "<group>";
+		};
+		15D0BAF11FB780D200BCD5F7 /* RiddleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */,
+				15D0BAF41FB780D200BCD5F7 /* Info.plist */,
+			);
+			path = RiddleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15D0BACE1FB780D200BCD5F7 /* Riddle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D0BAF71FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "Riddle" */;
+			buildPhases = (
+				15D0BACB1FB780D200BCD5F7 /* Sources */,
+				15D0BACC1FB780D200BCD5F7 /* Frameworks */,
+				15D0BACD1FB780D200BCD5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Riddle;
+			productName = Riddle;
+			productReference = 15D0BACF1FB780D200BCD5F7 /* Riddle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15D0BAE21FB780D200BCD5F7 /* RiddleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D0BAFA1FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "RiddleTests" */;
+			buildPhases = (
+				15D0BADF1FB780D200BCD5F7 /* Sources */,
+				15D0BAE01FB780D200BCD5F7 /* Frameworks */,
+				15D0BAE11FB780D200BCD5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15D0BAE51FB780D200BCD5F7 /* PBXTargetDependency */,
+			);
+			name = RiddleTests;
+			productName = RiddleTests;
+			productReference = 15D0BAE31FB780D200BCD5F7 /* RiddleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15D0BAED1FB780D200BCD5F7 /* RiddleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D0BAFD1FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "RiddleUITests" */;
+			buildPhases = (
+				15D0BAEA1FB780D200BCD5F7 /* Sources */,
+				15D0BAEB1FB780D200BCD5F7 /* Frameworks */,
+				15D0BAEC1FB780D200BCD5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15D0BAF01FB780D200BCD5F7 /* PBXTargetDependency */,
+			);
+			name = RiddleUITests;
+			productName = RiddleUITests;
+			productReference = 15D0BAEE1FB780D200BCD5F7 /* RiddleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15D0BAC71FB780D200BCD5F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Robert Gutierrez";
+				TargetAttributes = {
+					15D0BACE1FB780D200BCD5F7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					15D0BAE21FB780D200BCD5F7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15D0BACE1FB780D200BCD5F7;
+					};
+					15D0BAED1FB780D200BCD5F7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15D0BACE1FB780D200BCD5F7;
+					};
+				};
+			};
+			buildConfigurationList = 15D0BACA1FB780D200BCD5F7 /* Build configuration list for PBXProject "Riddle" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15D0BAC61FB780D200BCD5F7;
+			productRefGroup = 15D0BAD01FB780D200BCD5F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15D0BACE1FB780D200BCD5F7 /* Riddle */,
+				15D0BAE21FB780D200BCD5F7 /* RiddleTests */,
+				15D0BAED1FB780D200BCD5F7 /* RiddleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15D0BACD1FB780D200BCD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D0BADD1FB780D200BCD5F7 /* LaunchScreen.storyboard in Resources */,
+				15D0BADA1FB780D200BCD5F7 /* Assets.xcassets in Resources */,
+				15D0BAD81FB780D200BCD5F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BAE11FB780D200BCD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BAEC1FB780D200BCD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15D0BACB1FB780D200BCD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D0BAD51FB780D200BCD5F7 /* ViewController.swift in Sources */,
+				15D0BAD31FB780D200BCD5F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BADF1FB780D200BCD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D0BAE81FB780D200BCD5F7 /* RiddleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0BAEA1FB780D200BCD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D0BAF31FB780D200BCD5F7 /* RiddleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15D0BAE51FB780D200BCD5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15D0BACE1FB780D200BCD5F7 /* Riddle */;
+			targetProxy = 15D0BAE41FB780D200BCD5F7 /* PBXContainerItemProxy */;
+		};
+		15D0BAF01FB780D200BCD5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15D0BACE1FB780D200BCD5F7 /* Riddle */;
+			targetProxy = 15D0BAEF1FB780D200BCD5F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15D0BAD61FB780D200BCD5F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15D0BAD71FB780D200BCD5F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15D0BADC1FB780D200BCD5F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15D0BAF51FB780D200BCD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15D0BAF61FB780D200BCD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15D0BAF81FB780D200BCD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Riddle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.Riddle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15D0BAF91FB780D200BCD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Riddle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.Riddle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15D0BAFB1FB780D200BCD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RiddleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.RiddleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riddle.app/Riddle";
+			};
+			name = Debug;
+		};
+		15D0BAFC1FB780D200BCD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RiddleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.RiddleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riddle.app/Riddle";
+			};
+			name = Release;
+		};
+		15D0BAFE1FB780D200BCD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RiddleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.RiddleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Riddle;
+			};
+			name = Debug;
+		};
+		15D0BAFF1FB780D200BCD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RiddleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hack.RiddleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Riddle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15D0BACA1FB780D200BCD5F7 /* Build configuration list for PBXProject "Riddle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D0BAF51FB780D200BCD5F7 /* Debug */,
+				15D0BAF61FB780D200BCD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D0BAF71FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "Riddle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D0BAF81FB780D200BCD5F7 /* Debug */,
+				15D0BAF91FB780D200BCD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D0BAFA1FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "RiddleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D0BAFB1FB780D200BCD5F7 /* Debug */,
+				15D0BAFC1FB780D200BCD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D0BAFD1FB780D200BCD5F7 /* Build configuration list for PBXNativeTarget "RiddleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D0BAFE1FB780D200BCD5F7 /* Debug */,
+				15D0BAFF1FB780D200BCD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15D0BAC71FB780D200BCD5F7 /* Project object */;
+}
