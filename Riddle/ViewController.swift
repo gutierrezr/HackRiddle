@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         
         label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 100)
         label.textAlignment = .center
-        label.text = "Touch to getAway"
+        label.text = "Tap to Get Away..."
         self.view.addSubview(label)
         label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 37.0)
