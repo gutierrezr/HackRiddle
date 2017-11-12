@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         label.textAlignment = .center
         label.text = "Tap to Get Away..."
         self.view.addSubview(label)
-        label.textColor = UIColor.white
+        label.textColor = UIColor.darkGray
         label.font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.black)
         // UIFont.boldSystemFont(ofSize: 37.0)
         
