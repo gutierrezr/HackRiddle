@@ -23,6 +23,8 @@ var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
 var rectangle = UIImageView(image: UIImage(named: "rectangle.png"))
 var breathingCircle = UIImageView(image: UIImage(named: "breathingCircle.png"))
 
+var background = UIImageView(image: UIImage(named: "background.png"))
+
 var touchedCircle = false
 var activeDotGame = false
 
@@ -38,6 +40,12 @@ let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 60))
 var label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 60))
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var startButtonOutlet: UIButton!
+    @IBAction func startButton(_ sender: UIButton) {
+        startDotGame()
+    }
+    
     @IBOutlet var logoOutlet: UIImageView!
     
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -57,6 +65,11 @@ class ViewController: UIViewController {
         }
         
         player.play()
+        
+        background.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        background.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        view.addSubview(background)
+        background.isHidden = false
         
         openCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         openCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + 200)
@@ -91,6 +104,9 @@ class ViewController: UIViewController {
         label2.isHidden = true
         label2.font = UIFont.boldSystemFont(ofSize: 45.0)
         
+        startButtonOutlet.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        startButtonOutlet.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        
         
         //ALTITUDE
         if CMAltimeter.isRelativeAltitudeAvailable() {
@@ -110,37 +126,37 @@ class ViewController: UIViewController {
             return
         }
         
-        print(score)
-        
-        if (score > 0) {
-            label.isHidden = true
-        } else {
-            label.isHidden = false
-        }
-        
-        label.text = "click and drag to move the circle"
-        
-        openCircle.isHidden = false
-        
-        if let touch = touches.first {
-            let position = touch.location(in: view)
-            let x_touch = position.x
-            let y_touch = position.y
+        if (activeDotGame) {
+            print(score)
             
-            let x_closed = closedCircle.center.x
-            let y_closed = closedCircle.center.y
-            let r_closed = closedCircle.frame.width / 2
+            if (score > 0) {
+                label.isHidden = true
+            } else {
+                label.isHidden = false
+            }
             
-            if (pow(x_touch - x_closed, 2) + pow(y_touch - y_closed, 2) <= pow(r_closed, 2)) {
-                print("I AM IN THE CIRCLE")
-                randomizeCorner()
-                touchedCircle = true
+            label.text = "click and drag to move the circle"
+            
+            openCircle.isHidden = false
+            
+            if let touch = touches.first {
+                let position = touch.location(in: view)
+                let x_touch = position.x
+                let y_touch = position.y
                 
+                let x_closed = closedCircle.center.x
+                let y_closed = closedCircle.center.y
+                let r_closed = closedCircle.frame.width / 2
+                
+                if (pow(x_touch - x_closed, 2) + pow(y_touch - y_closed, 2) <= pow(r_closed, 2)) {
+                    print("I AM IN THE CIRCLE")
+                    randomizeCorner()
+                    touchedCircle = true
+                    
+                }
             }
         }
         
-        // IF we touched the first dot then
-        // randomly show another dot
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -217,6 +233,8 @@ class ViewController: UIViewController {
         activeDotGame = true
         rectangle.isHidden = true
         closedCircle.isHidden = false
+        startButtonOutlet.isHidden = true
+        label.isHidden = true
     }
     
     
