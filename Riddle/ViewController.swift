@@ -73,7 +73,7 @@ class ViewController: UIViewController {
             label.isHidden = false
         }
         
-        label.text = "click and drag to shit"
+        label.text = "click and drag to move the circle"
         
         openCircle.isHidden = false
         
