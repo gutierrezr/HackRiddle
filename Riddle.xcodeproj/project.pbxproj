@@ -14,7 +14,9 @@
 		15D0BADD1FB780D200BCD5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */; };
 		15D0BAE81FB780D200BCD5F7 /* RiddleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAE71FB780D200BCD5F7 /* RiddleTests.swift */; };
 		15D0BAF31FB780D200BCD5F7 /* RiddleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */; };
-		15D0BB041FB7A31900BCD5F7 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15D0BB031FB79E3400BCD5F7 /* Music.mp3 */; };
+		BFAD84991FB8718000B5CBAB /* ZenMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAD84961FB8718000B5CBAB /* ZenMusic.mp3 */; };
+		BFAD849A1FB8718000B5CBAB /* INHALE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAD84971FB8718000B5CBAB /* INHALE.mp3 */; };
+		BFAD849B1FB8718000B5CBAB /* EXHALE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAD84981FB8718000B5CBAB /* EXHALE.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,9 @@
 		15D0BAEE1FB780D200BCD5F7 /* RiddleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiddleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleUITests.swift; sourceTree = "<group>"; };
 		15D0BAF41FB780D200BCD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15D0BB031FB79E3400BCD5F7 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
+		BFAD84961FB8718000B5CBAB /* ZenMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ZenMusic.mp3; sourceTree = "<group>"; };
+		BFAD84971FB8718000B5CBAB /* INHALE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = INHALE.mp3; sourceTree = "<group>"; };
+		BFAD84981FB8718000B5CBAB /* EXHALE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EXHALE.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				15D0BAD21FB780D200BCD5F7 /* AppDelegate.swift */,
 				15D0BAD41FB780D200BCD5F7 /* ViewController.swift */,
-				15D0BB031FB79E3400BCD5F7 /* Music.mp3 */,
+				BFAD84981FB8718000B5CBAB /* EXHALE.mp3 */,
+				BFAD84971FB8718000B5CBAB /* INHALE.mp3 */,
+				BFAD84961FB8718000B5CBAB /* ZenMusic.mp3 */,
 				15D0BAD61FB780D200BCD5F7 /* Main.storyboard */,
 				15D0BAD91FB780D200BCD5F7 /* Assets.xcassets */,
 				15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */,
@@ -240,9 +246,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D0BB041FB7A31900BCD5F7 /* Music.mp3 in Resources */,
+				BFAD849B1FB8718000B5CBAB /* EXHALE.mp3 in Resources */,
 				15D0BADD1FB780D200BCD5F7 /* LaunchScreen.storyboard in Resources */,
 				15D0BADA1FB780D200BCD5F7 /* Assets.xcassets in Resources */,
+				BFAD849A1FB8718000B5CBAB /* INHALE.mp3 in Resources */,
+				BFAD84991FB8718000B5CBAB /* ZenMusic.mp3 in Resources */,
 				15D0BAD81FB780D200BCD5F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

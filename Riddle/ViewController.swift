@@ -20,14 +20,22 @@ import CoreMotion //core motion to use the barometer
 
 var closedCircle = UIImageView(image: UIImage(named: "closedCircle.png"))
 var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
+var rectangle = UIImageView(image: UIImage(named: "rectangle.png"))
+var breathingCircle = UIImageView(image: UIImage(named: "breathingCircle.png"))
+
 var touchedCircle = false
+var activeDotGame = false
 
 var randomCorner = arc4random_uniform(4) + 1
 var currentCorner = arc4random_uniform(4) + 1
 
 var score = 0
+var seconds = 300
+
+var timer = Timer()
 
 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
+var label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
 
 class ViewController: UIViewController {
     @IBOutlet var logoOutlet: UIImageView!
@@ -53,15 +61,33 @@ class ViewController: UIViewController {
         openCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         openCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + 200)
         view.addSubview(openCircle)
+        openCircle.isHidden = true
         
         closedCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        closedCircle.center = CGPoint(x: self.view.frame.width / 2 - self.view.frame.width / 4, y: self.view.frame.height / 2 - self.view.frame.height / 4)
+        closedCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         view.addSubview(closedCircle)
+        closedCircle.isHidden = true
         
-        label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        rectangle.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        rectangle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        view.addSubview(rectangle)
+        self.view.bringSubview(toFront: rectangle)
+        
+        breathingCircle.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        breathingCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        view.addSubview(closedCircle)
+        breathingCircle.isHidden = true
+        
+        label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 200)
         label.textAlignment = .center
-        label.text = "Touch the dot"
+        label.text = "Touch to Begin"
         self.view.addSubview(label)
+        
+        label2.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        label2.textAlignment = .center
+        label2.text = String(score)
+        self.view.addSubview(label2)
+        label2.isHidden = true
         
         
         //ALTITUDE
@@ -76,6 +102,11 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if (!activeDotGame) {
+            startDotGame()
+            return
+        }
         
         print(score)
         
@@ -102,6 +133,7 @@ class ViewController: UIViewController {
                 print("I AM IN THE CIRCLE")
                 randomizeCorner()
                 touchedCircle = true
+                
             }
         }
         
@@ -132,11 +164,16 @@ class ViewController: UIViewController {
                 print("YOU SCORED A POINT")
                 score += 1
                 
+                label2.isHidden = false
+                label2.text = String(score)
+                
                 currentCorner = randomCorner
 
                 closedCircle.center = CGPoint(x: openCircle.center.x, y: openCircle.center.y)
                 openCircle.isHidden = true
                 touchedCircle = false
+                
+                
             }
         }
     }
@@ -170,6 +207,15 @@ class ViewController: UIViewController {
     }
     
 
+    func startDotGame() {
+        activeDotGame = true
+        rectangle.isHidden = true
+        closedCircle.isHidden = false
+    }
+    
+    
+    
+    
     
     
 }
