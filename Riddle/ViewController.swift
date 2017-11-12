@@ -20,7 +20,7 @@ let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
 class ViewController: UIViewController {
     
     var player:AVAudioPlayer = AVAudioPlayer()
-    let altimeter = CMAltimeter()
+    let altimeter = CMAltimeter() //initializes the Core Motion altitude sensor
 
     override func viewDidLoad() {
         super.viewDidLoad()
