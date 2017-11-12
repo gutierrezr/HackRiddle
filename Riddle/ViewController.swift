@@ -33,9 +33,8 @@ class ViewController: UIViewController {
     @IBOutlet var logoOutlet: UIImageView!
     
     var player:AVAudioPlayer = AVAudioPlayer()
-    var Inhale:AVAudioPlayer = AVAudioPlayer()
-    var Exhale:AVAudioPlayer = AVAudioPlayer()
-    
+    let altimeter = CMAltimeter() //initializes the Core Motion altitude sensor
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -73,6 +72,7 @@ class ViewController: UIViewController {
                 }
             })
         }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -149,41 +149,27 @@ class ViewController: UIViewController {
     }
     
     
-    //INHALE AND EXHALE AUDIO
-    
-    /*
- 
-     do
-     {
-     let audioPath = Bundle.main.path(forResource: "INHALE", ofType: "mp3")
-     try Inhale = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-     }
-     catch
-     {
-     //PROCESS ERROR
-     }
-     
-     
-    do
-    {
-    let audioPath = Bundle.main.path(forResource: "EXHALE", ofType: "mp3")
-    try Exhale = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+    func randomizeCorner() {
+        
+        repeat {
+            randomCorner = arc4random_uniform(4) + 1
+        } while (currentCorner == randomCorner)
+        
+        switch randomCorner {
+        case 1:
+            openCircle.center = CGPoint(x: self.view.frame.width / 2 - self.view.frame.width / 4, y: self.view.frame.height / 2 - self.view.frame.height / 4)
+        case 2:
+            openCircle.center = CGPoint(x: self.view.frame.width / 2 + self.view.frame.width / 4, y: self.view.frame.height / 2 - self.view.frame.height / 4)
+        case 3:
+            openCircle.center = CGPoint(x: self.view.frame.width / 2 - self.view.frame.width / 4, y: self.view.frame.height / 2 + self.view.frame.height / 4)
+        case 4:
+            openCircle.center = CGPoint(x: self.view.frame.width / 2 + self.view.frame.width / 4, y: self.view.frame.height / 2 + self.view.frame.height / 4)
+        default:
+            print("Something went wrong")
+        }
     }
-    catch
-    {
-    //PROCESS ERROR
-    }
-    */
-    
-    
-    
     
 
-    //    func generateDot() {
-    //
-    //        let x_cord = arc4random_uniform(self.view.frame.width - button.size)
-    //        let y_cord = arc4random_uniform(self.view.frame.height - dot.size)
-    //    }
     
     
 }
