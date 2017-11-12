@@ -5,8 +5,13 @@ We were inspired to create an app that helps those who are afraid to fly. Accord
 ## What it does
 
 getAway attempts to calm a person's flying anxiety through distraction. It prompts the user to play a simple game that involves pressing and dragging closed circle into an opened circle that appears at random locations on the screen, if the user is successful, then his or her score is updated. Simultaneously, a soothing and calming audio is being played in the background. In addition, this app used Apple's CoreMotion framework to detect the altitude, which is used to determine the most anxiety triggering events during a flight. 
-
+<div>
 <img src="https://github.com/gutierrezr/HackRiddle/blob/master/IMG_1322.PNG" alt="alt text" width="200" height="350">
+
+<img src="https://github.com/gutierrezr/HackRiddle/blob/master/IMG_1323.PNG" alt="alt text" width="200" height="350">
+
+<img src="https://github.com/gutierrezr/HackRiddle/blob/master/IMG_1324.jpg" alt="alt text" width="200" height="350">
+</div>
 
 ## How we built it
 
