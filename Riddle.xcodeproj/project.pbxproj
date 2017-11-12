@@ -49,8 +49,6 @@
 		15D0BAF21FB780D200BCD5F7 /* RiddleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleUITests.swift; sourceTree = "<group>"; };
 		15D0BAF41FB780D200BCD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D0BB031FB79E3400BCD5F7 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
-		15D0BB051FB7F12000BCD5F7 /* EXHALE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EXHALE.mp3; sourceTree = "<group>"; };
-		15D0BB061FB7F12C00BCD5F7 /* INHALE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = INHALE.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +102,6 @@
 				15D0BAD21FB780D200BCD5F7 /* AppDelegate.swift */,
 				15D0BAD41FB780D200BCD5F7 /* ViewController.swift */,
 				15D0BB031FB79E3400BCD5F7 /* Music.mp3 */,
-				15D0BB051FB7F12000BCD5F7 /* EXHALE.mp3 */,
-				15D0BB061FB7F12C00BCD5F7 /* INHALE.mp3 */,
 				15D0BAD61FB780D200BCD5F7 /* Main.storyboard */,
 				15D0BAD91FB780D200BCD5F7 /* Assets.xcassets */,
 				15D0BADB1FB780D200BCD5F7 /* LaunchScreen.storyboard */,

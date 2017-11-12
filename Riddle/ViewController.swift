@@ -68,8 +68,7 @@ class ViewController: UIViewController {
         if CMAltimeter.isRelativeAltitudeAvailable() {
             altimeter.startRelativeAltitudeUpdates(to: OperationQueue.current!, withHandler: { data, error in
                 if !(error != nil) {
-                    print("Relative Altitude: \(data?.relativeAltitude)")
-                    print("Relative Pressure: \(data?.pressure)")
+                    print(data!.relativeAltitude)
                 }
             })
         }
