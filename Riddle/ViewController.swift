@@ -71,12 +71,12 @@ class ViewController: UIViewController {
         view.addSubview(background)
         background.isHidden = false
         
-        openCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        openCircle.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
         openCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + 200)
         view.addSubview(openCircle)
         openCircle.isHidden = true
         
-        closedCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        closedCircle.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
         closedCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         view.addSubview(closedCircle)
         closedCircle.isHidden = true
@@ -91,18 +91,19 @@ class ViewController: UIViewController {
         view.addSubview(closedCircle)
         breathingCircle.isHidden = true
         
-        label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 200)
+        label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 100)
         label.textAlignment = .center
         label.text = "Touch to getAway"
         self.view.addSubview(label)
-        label.font = UIFont.boldSystemFont(ofSize: 25.0)
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 37.0)
         
         label2.center = CGPoint(x: self.view.frame.width / 2, y: label2.frame.height)
         label2.textAlignment = .center
         label2.text = String(score)
         self.view.addSubview(label2)
         label2.isHidden = true
-        label2.font = UIFont.boldSystemFont(ofSize: 45.0)
+        label2.font = UIFont.boldSystemFont(ofSize: 50.0)
         
         startButtonOutlet.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         startButtonOutlet.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
@@ -121,6 +122,8 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        label.isHidden = true
+        
         if (!activeDotGame) {
             startDotGame()
             return
@@ -135,9 +138,6 @@ class ViewController: UIViewController {
                 label.isHidden = false
             }
             
-            label.text = "click and drag to move the circle"
-            
-            openCircle.isHidden = false
             
             if let touch = touches.first {
                 let position = touch.location(in: view)
@@ -150,6 +150,8 @@ class ViewController: UIViewController {
                 
                 if (pow(x_touch - x_closed, 2) + pow(y_touch - y_closed, 2) <= pow(r_closed, 2)) {
                     print("I AM IN THE CIRCLE")
+                    openCircle.isHidden = false
+                    label.isHidden = true
                     randomizeCorner()
                     touchedCircle = true
                     
@@ -234,7 +236,7 @@ class ViewController: UIViewController {
         rectangle.isHidden = true
         closedCircle.isHidden = false
         startButtonOutlet.isHidden = true
-        label.isHidden = true
+        label.text = "Touch and Drag"
     }
     
     
