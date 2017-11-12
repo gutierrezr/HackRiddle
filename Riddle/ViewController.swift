@@ -34,8 +34,8 @@ var seconds = 300
 
 var timer = Timer()
 
-let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
-var label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 60))
+var label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 60))
 
 class ViewController: UIViewController {
     @IBOutlet var logoOutlet: UIImageView!
@@ -80,14 +80,16 @@ class ViewController: UIViewController {
         
         label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 200)
         label.textAlignment = .center
-        label.text = "Touch to Begin"
+        label.text = "Touch to getAway"
         self.view.addSubview(label)
+        label.font = UIFont.boldSystemFont(ofSize: 25.0)
         
-        label2.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+        label2.center = CGPoint(x: self.view.frame.width / 2, y: label2.frame.height)
         label2.textAlignment = .center
         label2.text = String(score)
         self.view.addSubview(label2)
         label2.isHidden = true
+        label2.font = UIFont.boldSystemFont(ofSize: 45.0)
         
         
         //ALTITUDE
@@ -160,6 +162,10 @@ class ViewController: UIViewController {
             let y_open = openCircle.center.y
             let r_open = openCircle.frame.width / 2
             
+            if (touchedCircle) {
+                closedCircle.center = CGPoint(x: position.x, y: position.y)
+            }
+            
             if ((pow(x_touch - x_open, 2) + pow(y_touch - y_open, 2) <= pow(r_open, 2)) && touchedCircle == true) {
                 print("YOU SCORED A POINT")
                 score += 1
@@ -215,7 +221,9 @@ class ViewController: UIViewController {
     
     
     
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
 }

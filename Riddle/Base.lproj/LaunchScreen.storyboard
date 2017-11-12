@@ -22,14 +22,18 @@
                                 <rect key="frame" x="66" y="237" width="254" height="128"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.1282443106174469" blue="0.64642161130905151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7p4-gc-mD5" secondAttribute="trailing" constant="101" id="0oe-Jb-dqH"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="32X-QR-W0e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7p4-gc-mD5" secondAttribute="bottom" constant="302" id="3Ah-Hr-tG7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7p4-gc-mD5" secondAttribute="bottom" constant="293" id="BFZ-i6-fdd"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="Bvo-jp-YZO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7p4-gc-mD5" secondAttribute="bottom" constant="302" id="ED5-Ak-Ma6"/>
+                            <constraint firstItem="7p4-gc-mD5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="EsG-RX-eWO"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="Ets-ID-uMW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7p4-gc-mD5" secondAttribute="trailing" constant="55" id="QhT-vm-574"/>
+                            <constraint firstItem="7p4-gc-mD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="272" id="Tcp-Uv-xn6"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="chJ-eO-C3x"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="fOX-ig-JAI"/>
                             <constraint firstItem="7p4-gc-mD5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="m0U-uK-COa"/>
