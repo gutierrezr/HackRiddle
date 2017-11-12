@@ -121,6 +121,8 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        label.isHidden = true
+        
         if (!activeDotGame) {
             startDotGame()
             return
@@ -135,8 +137,6 @@ class ViewController: UIViewController {
                 label.isHidden = false
             }
             
-            label.text = "click and drag to move the circle"
-            
             openCircle.isHidden = false
             
             if let touch = touches.first {
@@ -150,6 +150,7 @@ class ViewController: UIViewController {
                 
                 if (pow(x_touch - x_closed, 2) + pow(y_touch - y_closed, 2) <= pow(r_closed, 2)) {
                     print("I AM IN THE CIRCLE")
+                    label.isHidden = true
                     randomizeCorner()
                     touchedCircle = true
                     
@@ -234,7 +235,7 @@ class ViewController: UIViewController {
         rectangle.isHidden = true
         closedCircle.isHidden = false
         startButtonOutlet.isHidden = true
-        label.isHidden = true
+        label.text = "Touch and Drag"
     }
     
     
