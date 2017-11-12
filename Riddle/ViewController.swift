@@ -18,6 +18,8 @@ let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
 class ViewController: UIViewController {
     
     var player:AVAudioPlayer = AVAudioPlayer()
+    var Inhale:AVAudioPlayer = AVAudioPlayer()
+    var Exhale:AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +87,36 @@ class ViewController: UIViewController {
     }
     
     
+    //INHALE AND EXHALE AUDIO
+    
+    /*
+ 
+     do
+     {
+     let audioPath = Bundle.main.path(forResource: "INHALE", ofType: "mp3")
+     try Inhale = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+     }
+     catch
+     {
+     //PROCESS ERROR
+     }
+     
+     
+    do
+    {
+    let audioPath = Bundle.main.path(forResource: "EXHALE", ofType: "mp3")
+    try Exhale = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+    }
+    catch
+    {
+    //PROCESS ERROR
+    }
+    */
     
     
+    
+    
+
     //    func generateDot() {
     //
     //        let x_cord = arc4random_uniform(self.view.frame.width - button.size)
