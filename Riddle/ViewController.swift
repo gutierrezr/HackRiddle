@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
         do
         {
-            let audioPath = Bundle.main.path(forResource: "Music", ofType: "mp3")
+            let audioPath = Bundle.main.path(forResource: "ZenMusic", ofType: "mp3")
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
         }
         catch
