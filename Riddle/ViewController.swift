@@ -14,6 +14,7 @@
  */
 
 import UIKit
+import AVFoundation
 
 var closedCircle = UIImageView(image: UIImage(named: "closedCircle.png"))
 var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
@@ -29,8 +30,22 @@ let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
 class ViewController: UIViewController {
     @IBOutlet var logoOutlet: UIImageView!
     
+    var player:AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "Music", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+        
+        player.play()
         
         openCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         openCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + 200)
