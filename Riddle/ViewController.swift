@@ -4,18 +4,33 @@
 //  Copyright © 2017 Michael Strohmeier. All rights reserved.
 //
 
+
+/*
+ 
+ %$#%$#%$#$%%#%#%##%#%#%#%#%#%#%#$%#@$$@#%#@$@$@$$$$@$%#%#%#%
+ WE WANT TO DO SOMETHING WHEN THE SCORE REACHES 10
+ %$#^%$%^#$%^$@%^#^&%#^&$#%$&^#%$^#$#%^#$@%^$@^%#$@%#^$@#%^$&
+ 
+ */
+
 import UIKit
 import AVFoundation
+import CoreMotion //core motion to use the barometer
 
-let closedCircle = UIImageView(image: UIImage(named: "closedCircle.png")) // Please change me later
-let openCircle = UIImageView(image: UIImage(named: "openCircle.png")) // Please change me later
-var inCorrectArea = true
 
-//var closedDot
+var closedCircle = UIImageView(image: UIImage(named: "closedCircle.png"))
+var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
+var touchedCircle = false
 
-let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+var randomCorner = arc4random_uniform(4) + 1
+var currentCorner = arc4random_uniform(4) + 1
+
+var score = 0
+
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 600, height: 21))
 
 class ViewController: UIViewController {
+    @IBOutlet var logoOutlet: UIImageView!
     
     var player:AVAudioPlayer = AVAudioPlayer()
     var Inhale:AVAudioPlayer = AVAudioPlayer()
@@ -41,7 +56,7 @@ class ViewController: UIViewController {
         view.addSubview(openCircle)
         
         closedCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        closedCircle.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - 200)
+        closedCircle.center = CGPoint(x: self.view.frame.width / 2 - self.view.frame.width / 4, y: self.view.frame.height / 2 - self.view.frame.height / 4)
         view.addSubview(closedCircle)
         
         label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
@@ -50,15 +65,46 @@ class ViewController: UIViewController {
         self.view.addSubview(label)
         
         
+        //ALTITUDE
+        if CMAltimeter.isRelativeAltitudeAvailable() {
+            altimeter.startRelativeAltitudeUpdates(to: OperationQueue.current!, withHandler: { data, error in
+                if !(error != nil) {
+                    print("Relative Altitude: \(data?.relativeAltitude)")
+                    print("Relative Pressure: \(data?.pressure)")
+                }
+            })
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        label.isHidden = false
-        label.text = "Move to open circle"
+        
+        print(score)
+        
+        if (score > 0) {
+            label.isHidden = true
+        } else {
+            label.isHidden = false
+        }
+        
+        label.text = "click and drag to move the circle"
+        
+        openCircle.isHidden = false
         
         if let touch = touches.first {
             let position = touch.location(in: view)
-            print(position)
+            let x_touch = position.x
+            let y_touch = position.y
+            
+            let x_closed = closedCircle.center.x
+            let y_closed = closedCircle.center.y
+            let r_closed = closedCircle.frame.width / 2
+            
+            if (pow(x_touch - x_closed, 2) + pow(y_touch - y_closed, 2) <= pow(r_closed, 2)) {
+                print("I AM IN THE CIRCLE")
+                randomizeCorner()
+                touchedCircle = true
+            }
         }
         
         // IF we touched the first dot then
@@ -66,10 +112,10 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (!inCorrectArea) {
-            // Prompt user to touch screen again
-        }
-        label.isHidden = false
+        
+        openCircle.isHidden = true
+        touchedCircle = false
+//        label.isHidden = false
     }
     
     
@@ -77,9 +123,27 @@ class ViewController: UIViewController {
         // if we are at the open circle do something
         if let touch = touches.first {
             let position = touch.location(in: view)
-            print(position)
+            let x_touch = position.x
+            let y_touch = position.y
+            
+            let x_open = openCircle.center.x
+            let y_open = openCircle.center.y
+            let r_open = openCircle.frame.width / 2
+            
+            if ((pow(x_touch - x_open, 2) + pow(y_touch - y_open, 2) <= pow(r_open, 2)) && touchedCircle == true) {
+                print("YOU SCORED A POINT")
+                score += 1
+                
+                currentCorner = randomCorner
+
+                closedCircle.center = CGPoint(x: openCircle.center.x, y: openCircle.center.y)
+                openCircle.isHidden = true
+                touchedCircle = false
+            }
         }
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
