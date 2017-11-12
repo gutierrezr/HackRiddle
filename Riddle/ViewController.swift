@@ -17,7 +17,6 @@ import UIKit
 import AVFoundation
 import CoreMotion //core motion to use the barometer
 
-
 var closedCircle = UIImageView(image: UIImage(named: "closedCircle.png"))
 var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
 var rectangle = UIImageView(image: UIImage(named: "rectangle.png"))
@@ -96,14 +95,15 @@ class ViewController: UIViewController {
         label.text = "Touch to getAway"
         self.view.addSubview(label)
         label.textColor = UIColor.white
-        label.font = UIFont.boldSystemFont(ofSize: 37.0)
+        label.font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.black)
+        // UIFont.boldSystemFont(ofSize: 37.0)
         
         label2.center = CGPoint(x: self.view.frame.width / 2, y: label2.frame.height)
         label2.textAlignment = .center
         label2.text = String(score)
         self.view.addSubview(label2)
         label2.isHidden = true
-        label2.font = UIFont.boldSystemFont(ofSize: 50.0)
+        label2.font = UIFont.systemFont(ofSize: 50.0, weight: UIFont.Weight.black)
         
         startButtonOutlet.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         startButtonOutlet.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
@@ -187,6 +187,9 @@ class ViewController: UIViewController {
             if ((pow(x_touch - x_open, 2) + pow(y_touch - y_open, 2) <= pow(r_open, 2)) && touchedCircle == true) {
                 print("YOU SCORED A POINT")
                 score += 1
+                
+                // VIBRATE
+                AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
                 
                 label2.isHidden = false
                 label2.text = String(score)
