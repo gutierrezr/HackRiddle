@@ -15,6 +15,8 @@
 
 import UIKit
 import AVFoundation
+import CoreMotion //core motion to use the barometer
+
 
 var closedCircle = UIImageView(image: UIImage(named: "closedCircle.png"))
 var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
@@ -31,7 +33,8 @@ class ViewController: UIViewController {
     @IBOutlet var logoOutlet: UIImageView!
     
     var player:AVAudioPlayer = AVAudioPlayer()
-    
+    let altimeter = CMAltimeter() //initializes the Core Motion altitude sensor
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -60,6 +63,16 @@ class ViewController: UIViewController {
         label.text = "Touch the dot"
         self.view.addSubview(label)
         
+        
+        //ALTITUDE
+        if CMAltimeter.isRelativeAltitudeAvailable() {
+            altimeter.startRelativeAltitudeUpdates(to: OperationQueue.current!, withHandler: { data, error in
+                if !(error != nil) {
+                    print("Relative Altitude: \(data?.relativeAltitude)")
+                    print("Relative Pressure: \(data?.pressure)")
+                }
+            })
+        }
         
     }
     
@@ -128,6 +141,8 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
