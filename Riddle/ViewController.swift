@@ -23,7 +23,7 @@ var openCircle = UIImageView(image: UIImage(named: "openCircle.png"))
 var rectangle = UIImageView(image: UIImage(named: "rectangle.png"))
 var breathingCircle = UIImageView(image: UIImage(named: "breathingCircle.png"))
 
-var background = UIImageView(image: UIImage(named: "background.png"))
+var background = UIImageView(image: UIImage(named: "bambooBackground.jpg"))
 
 var touchedCircle = false
 var activeDotGame = false
